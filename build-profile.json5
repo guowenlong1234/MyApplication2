@@ -1,0 +1,90 @@
+{
+  "app": {
+    "signingConfigs": [
+      //      {
+      //        "name": "default",
+      //        "material": {
+      //          "certpath": "C:/Users/98712/.ohos/config/openharmony/default_MyApplication2_iwOsws-njfiPzcy95P2WMM_LiIp0fX8coAC-dqjuS00=.cer",
+      //          "storePassword": "0000001BF674E86C51CB6DA11F78A1F2560E82485B31D6AF7970A0721B0D32C310CA218A363AF965CDB632",
+      //          "keyAlias": "debugKey",
+      //          "keyPassword": "0000001B09E08C498CC4C91EFAF3DAC7A5FFA9DC9E5D6207061623CC62F742AAB21B5B6F02EF51C0CC1BAC",
+      //          "profile": "C:/Users/98712/.ohos/config/openharmony/default_MyApplication2_iwOsws-njfiPzcy95P2WMM_LiIp0fX8coAC-dqjuS00=.p7b",
+      //          "signAlg": "SHA256withECDSA",
+      //          "storeFile": "C:/Users/98712/.ohos/config/openharmony/default_MyApplication2_iwOsws-njfiPzcy95P2WMM_LiIp0fX8coAC-dqjuS00=.p12"
+      //        }
+      //      }
+      //      {
+      //        "name": "default",
+      //        "material": {
+      //          "certpath": "C:/Users/98712/.ohos/config/openharmony/default_MyApplication2_iwOsws-njfiPzcy95P2WMM_LiIp0fX8coAC-dqjuS00=.cer",
+      //          "storePassword": "0000001B5C63E035C2804E8286F8EDE4EE48FAD8D0AF819408A6143EBB5147614FDDBBB5F270EC7416A5C2",
+      //          "keyAlias": "debugKey",
+      //          "keyPassword": "0000001B9A371CD2CC223727B9A058E60C8B684CB696F9677859C5B1E161876FA5C473CDBD7C3294910579",
+      //          "profile": "C:/Users/98712/.ohos/config/openharmony/default_MyApplication2_iwOsws-njfiPzcy95P2WMM_LiIp0fX8coAC-dqjuS00=.p7b",
+      //          "signAlg": "SHA256withECDSA",
+      //          "storeFile": "C:/Users/98712/.ohos/config/openharmony/default_MyApplication2_iwOsws-njfiPzcy95P2WMM_LiIp0fX8coAC-dqjuS00=.p12"
+      //        }
+      //      }
+      //      {
+      //        "name": "default",
+      //        "material": {
+      //          "storePassword": "000000194F79C78E56185ED89E79B38F7538153B30C74EB340BA3AD55C09CD064DEDE22D48E757AB9C",
+      //          "certpath": "C:/Users/98712/DevecostudioProjects/MyApplication2/sign/OpenHarmonyApplication.cer",
+      //          "keyAlias": "OpenHarmony Application Release",
+      //          "keyPassword": "000000191F871A32CF43724A0FA4C6D37410B0D67A2285A278038CA1E83FA4AD22027D6CCED4DB0FD4",
+      //          "profile": "C:/Users/98712/DevecostudioProjects/MyApplication2/sign/launcher.p7b",
+      //          "signAlg": "SHA256withECDSA",
+      //          "storeFile": "C:/Users/98712/DevecostudioProjects/MyApplication2/sign/OpenHarmony.p12"
+      //        }
+      //      }
+      {
+        "name": "default",
+        "material": {
+          "certpath": "C:/Users/98712/.ohos/config/openharmony/default_MyApplication2_iwOsws-njfiPzcy95P2WMM_LiIp0fX8coAC-dqjuS00=.cer",
+          "storePassword": "0000001B299C719DD813349FB5FCAB131CE998F6434AC8642FFF27C4614D3321F2E11F79E977903FC82613",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B88868D1FE8CBD414E659ACF97E1BAF6EE5E18915A65317D6D1130680C6CDA5421113432DEB146C",
+          "profile": "C:/Users/98712/.ohos/config/openharmony/default_MyApplication2_iwOsws-njfiPzcy95P2WMM_LiIp0fX8coAC-dqjuS00=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:/Users/98712/.ohos/config/openharmony/default_MyApplication2_iwOsws-njfiPzcy95P2WMM_LiIp0fX8coAC-dqjuS00=.p12"
+        }
+      }
+    ],
+    // 🚩 注意：这里原来的 compileSdkVersion 和 compatibleSdkVersion 已经被我删掉了！
+    // 请确保你那里的第 4、5 行也被删掉或注释掉，不要留在这里。
+
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        // 👇👇👇 全部移动到这里 👇👇👇
+        "compileSdkVersion": 11,
+        "compatibleSdkVersion": 11,
+        "runtimeOS": "OpenHarmony"
+        // 👆👆👆 全部移动到这里 👆👆👆
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}
