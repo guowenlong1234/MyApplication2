@@ -7,15 +7,15 @@ export interface AppItem {
 
 export interface FileItem {
   name: string;
-  desc: string;    // 显示路径
+  desc: string;
   type: 'doc' | 'img' | 'video' | 'music';
-  content: string; // 【核心】这里存放文档的真实内容，用于搜索
+  content: string;
 }
 
 export class AppModel {
   getMockFiles(): Array<FileItem> {
     return [
-    // === 真实文档 1：操作系统作业 ===
+
       {
         name: '高级操作系统_大作业报告.docx',
         desc: 'C:/Documents/Study/OS',
@@ -23,7 +23,7 @@ export class AppModel {
         content: '本次实验基于OpenHarmony 4.1 Release版本，完成了智能桌面Launcher的开发。实现了Dock栏跨端设备应用接续，桌面融合搜索模块支持文件名与文档内容的语义搜索。使用了ArkTS进行UI布局...'
       },
 
-      // === 真实文档 2：复习资料 ===
+
       {
         name: '期末考试复习重点.txt',
         desc: 'C:/Desktop',
@@ -31,7 +31,7 @@ export class AppModel {
         content: 'OpenHarmony架构分为内核层、系统服务层、框架层和应用层。HDC是命令行工具。Ability分为UIAbility和ExtensionAbility。分布式软总线是实现万物互联的底座...'
       },
 
-      // === 真实文档 3：周杰伦歌词 (测试娱乐搜索) ===
+
       {
         name: '周杰伦_七里香.lrc',
         desc: 'C:/Music/Jay',
@@ -39,7 +39,7 @@ export class AppModel {
         content: '窗外的麻雀在电线杆多嘴，你说这一句很有夏天的感觉。手中的铅笔在纸上来来回回...'
       },
 
-      // === 普通文件 (内容为空或简单描述) ===
+
       { name: 'RVBook_原理图.pdf', desc: 'C:/Downloads', type: 'doc', content: 'RISC-V电路设计图纸' },
       { name: '家庭聚会_全家福.jpg', desc: 'C:/Pictures/Life', type: 'img', content: '照片 人物 聚会' },
       { name: '演示视频.mp4', desc: 'C:/Videos', type: 'video', content: '视频录制' }
@@ -79,11 +79,8 @@ export class AppModel {
         abilityName: 'com.ohos.settings.MainAbility'
       },
 
-      // ===========================
-      // 第二排：办公与效率
-      // ===========================
       {
-        name: 'com.ohos.filepicker', // 或者是  com.ohos.UserFile.ExternalFileManager
+        name: 'com.ohos.filepicker',
         label: '文件管理器',
         icon: $r('app.media.filepicker'),
         abilityName: 'MainAbility'
@@ -107,9 +104,6 @@ export class AppModel {
         abilityName: 'EntryAbility'
       },
 
-      // ===========================
-      // 第三排：工具与多媒体
-      // ===========================
       {
         name: 'com.example.distributedcalc',
         label: '计算器',
@@ -123,7 +117,7 @@ export class AppModel {
         abilityName: 'EntryAbility'
       },
       {
-        name: 'com.ohos.camera',
+        name: 'ohos.samples.qrcodescan',
         label: '相机',
         icon: $r('app.media.camera'),
         abilityName: 'EntryAbility'
@@ -135,9 +129,6 @@ export class AppModel {
         abilityName: 'EntryAbility'
       },
 
-      // ===========================
-      // 第四排：互联网与通讯
-      // ===========================
       {
         name: 'ohos.samples.browser',
         label: '浏览器',
@@ -163,9 +154,6 @@ export class AppModel {
         abilityName: 'MainAbility'
       },
 
-      // ===========================
-      // 凑数/系统组件 (丰富界面)
-      // ===========================
       {
         name: 'com.example.distributedmusicplayer',
         label: '分布式音乐',
@@ -179,7 +167,7 @@ export class AppModel {
       },
       {
         name: 'mock.appstore',
-        label: '应用商店', // 这是一个Mock，因为dump里没找到明确的Store
+        label: '应用商店',
         icon: $r('app.media.appstore')
       },
       {
@@ -190,7 +178,7 @@ export class AppModel {
     {
         name: 'distributed.center', // 特殊包名，用于识别
         label: '超级终端',
-        icon: $r('app.media.connect') // 用你新替换的图标
+        icon: $r('app.media.connect')
       },
     ];
   }

@@ -4,7 +4,6 @@ import { AppModel, AppItem, FileItem } from '../model/AppModel';
 export struct SearchDialog {
   controller: CustomDialogController;
   @Link appList: Array<AppItem>;
-  // 修复报错：给函数一个默认空实现
   launchApp: (item: AppItem) => void = () => {};
 
   @State searchText: string = '';
@@ -76,7 +75,6 @@ export struct SearchDialog {
               }
             }
 
-            // --- 文档内容结果 (重点！) ---
             if (this.resultFiles.length > 0) {
               Text("文档与内容").fontSize(14).fontColor('#007DFA').width('100%').margin({ top: 15, bottom: 5 })
               List() {
@@ -88,10 +86,9 @@ export struct SearchDialog {
                         // 文件名
                         Text(file.name).fontSize(15).fontColor('#333')
 
-                        // 显示路径
+
                         Text(file.desc).fontSize(12).fontColor('#999')
 
-                        // 【亮点】如果内容匹配，显示摘要
                         if (file.content.toLowerCase().includes(this.searchText.toLowerCase())) {
                           Text(`...包含: "${this.getSnippet(file.content, this.searchText)}"...`)
                             .fontSize(12)

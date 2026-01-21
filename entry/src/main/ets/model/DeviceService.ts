@@ -8,9 +8,9 @@ export interface DeviceInfo {
 }
 
 export class DeviceService {
-  // 显式声明类型，或者是 any
+
   private dmInstance: any = null;
-  private bundleName = 'com.student.desktop'; // 确保和你 app.json5 里的一致
+  private bundleName = 'com.student.desktop';
 
   // 初始化设备管理器
   initDM(onDeviceFound: (device: DeviceInfo) => void): void {
@@ -24,20 +24,17 @@ export class DeviceService {
         this.dmInstance = data;
         console.info('[SoftBus] DM创建成功');
 
-        // 注册设备发现监听
-        // 【修改点】data 类型设为 any，防止结构不匹配报错
+
         this.dmInstance.on('deviceFound', (data: any) => {
-          // 【重要】真实的设备信息通常在 data.deviceInfo 里
-          // 如果 data.deviceInfo 为空，则可能是 data 本身 (视版本而定)
+
           let info = data.deviceInfo ? data.deviceInfo : data;
 
           console.info(`[SoftBus] 发现: ${info.deviceName}, ID: ${info.deviceId}`);
 
-          // 回调通知 UI
+
           onDeviceFound({
             deviceId: info.deviceId,
             deviceName: info.deviceName,
-            // 注意：有的版本叫 deviceType，有的叫 deviceTypeId
             deviceType: info.deviceTypeId !== undefined ? info.deviceTypeId : info.deviceType
           });
         });
@@ -46,21 +43,20 @@ export class DeviceService {
         this.startDiscovery();
       });
     } catch (e) {
-      // 捕获 BusinessError
+
       let err = e as BusinessError;
       console.error(`[SoftBus] 初始化异常: ${err.message}`);
     }
   }
 
-  // 开始发现周边设备
+
   startDiscovery(): void {
     if (!this.dmInstance) return;
 
-    // 发现参数
     let discoverParam = {
       subscribeId: 100,
-      mode: 0xAA,       // 主动发现
-      medium: 2,        // WiFi
+      mode: 0xAA,
+      medium: 2,
       freq: 1,
       isSameAccount: false,
       isWakeRemote: false,
