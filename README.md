@@ -46,26 +46,26 @@
 1. 右键设备管理器中的“USB download gadget”，点击“更新驱动程序”
 2. 选择“浏览我的电脑以查找驱动程序”
 
-![img_3.png](img/img_3.png)
+![img_1.png](img/1/img_1.png)
 
 3. 选择“让我从计算机上的可用驱动程序列表中选取”
 
-![img_4.png](img/img_4.png)
+![img_2.png](img/1/img_2.png)
 
 4. 选中“显示所有设备”，并点击“下一步”
 5. 点击“从磁盘安装”
 
 6. 点击“浏览”，选中Google USB驱动下的inf文件，点击确定
 
-![img_5.png](img/img_5.png)
+![img_4.png](img/1/img_4.png)
 
 7. 选中“Android Bootloader Interface”，点击“下一步”，在弹出对话框中点击“是”，在弹出的Windows安全中心对话框中点击“安装”
 
-![img_6.png](img/img_6.png)
+![img_5.png](img/1/img_5.png)
 
 8. 成功安装fastboot驱动
 
-![img_7.png](img/img_7.png)
+![img_6.png](img/1/img_6.png)
 
 完成上述操作后，即可继续下面的步骤。
 
@@ -237,7 +237,7 @@ DevEco Studio的版本需要和OpenHarmony版本相匹配。
 - 网格布局：应用图标采用自适应 Grid 布局，支持横屏宽屏显示。
 - 底部 Dock 栏：集成了开始菜单、全局搜索框、常用应用入口及系统状态托盘（时间、WiFi、电池状态），实现了桌面操作逻辑的闭环。
 
-![img.png](img/img_12.png)
+- ![img_7.png](img/1/img_7.png)
 
 ### 4.2 桌面融合搜索 (Fusion Search)
 【功能描述】 实现了本地应用与文件系统的深度融合搜索。
@@ -284,12 +284,12 @@ DevEco Studio的版本需要和OpenHarmony版本相匹配。
 ![img_8.png](img/img_11.png)
 
 ## 5-小组人员分工
-### 组长：
+- 组长：
   - 学号：
-  - 负责项目的统筹协调，资料以及相关资源的收集。文档的收集和整理工作。
-### 组员：
+  - 负责项目的统筹协调，资料以及相关资源的收集。文档的收集和整理工作
+- 组员：
   - 学号：
-  - 负责项目的主体开发。
-### 组员：
+  - 负责项目的主体开发
+- 组员：
   - 学号：
-  - 负责文档的整理、撰写。汇报PPT的制作。查找开发过程中用到的必须的资源。
+  - 负责文档的整理、撰写。汇报PPT的制作。开发过程中的资源
